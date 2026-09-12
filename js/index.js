@@ -20,7 +20,7 @@ async function buscarCidades() {
     elementoPrevisao.textContent = "";
 
     let resposta = await fetch(
-      `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(nome)}&count=10&language=pt&format=json`,
+      `https://geocoding-api.open-meteo.com/v1/search?name={NOME}&count={N}&language={LANG}&format=json`,
     );
     let dados = await resposta.json();
 
@@ -45,7 +45,7 @@ async function buscarCidades() {
 async function buscarPrevisao(id) {
   elementoPrevisao.textContent = "Buscando previsão...";
   let resposta = await fetch(
-    `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,temperature_2m_min,weather_code,uv_index_max&timezone=auto&forecast_days=1`,
+    `https://api.open-meteo.com/v1/forecast?latitude={LAT}&longitude={LON}&daily={VARIÁVEIS}&timezone=auto`,
   );
 
   let dados = await resposta.json();

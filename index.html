@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Previsão do tempo</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/index.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+        <section class="painel">
+        <header class="cabecalho">
+          <span class="icone-clima">&#9728</span>
+          <div>
+            <p class="subtitulo">Previsão do tempo</p>
+            <h1 class="titulo">Clima  tempo</h1>
+          </div>
+        </header>
+
+        <div clss="busca">
+            <label for="cidade"><strong>Busque o nome da sua cidade:</strong></label>
+
+            <div class="campo-busca">
+                <span>&#128269;</span>
+                <input type="text" id="cidade" placeholder="Digite o nome da cidade" aotocomplete="off">
+            </div>
+            <small class="Enter">Digite o nome e pressione Enter</small>
+        </div>
+
+      <p id="mensagem"></p>
+      <div id="cidades"></div>
+      <div id="previsao"></div>
+      </section>
+    </main>
+  </body>
+</html>

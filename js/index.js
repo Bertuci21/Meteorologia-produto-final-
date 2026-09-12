@@ -20,7 +20,7 @@ async function buscarCidades() {
     elementoPrevisao.textContent = "";
 
     let resposta = await fetch(
-      `https://geocodinghttps://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(nome)}&count=10&language=pt&format=json`,
+      `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(nome)}&count=10&language=pt&format=json`,
     );
     let dados = await resposta.json();
 
